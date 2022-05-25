@@ -1,0 +1,14 @@
+.parallax{
+    background-image: url("../recursos/imagen-principal-3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+&__dos{
+    background-image: url("../recursos/imagen-principal.jfif");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+}
