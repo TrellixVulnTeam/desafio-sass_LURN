@@ -61,7 +61,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans', sans-serif; }
+  font-family: "PT Sans", sans-serif; }
 
 html {
   scroll-behavior: smooth; }
@@ -137,7 +137,7 @@ html {
     padding: 20px;
     border-radius: 3px; }
   .menu__titulo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -245,7 +245,7 @@ footer {
 
 .grid__parrafo {
   font-size: 1em;
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px; }
 
@@ -263,7 +263,7 @@ footer {
     margin-top: 100px;
     margin-bottom: 100px;
     border-radius: 4px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     color: #fff;
     box-shadow: 8px 24px 37px #000000; }
   .contacto__btn {
@@ -286,7 +286,7 @@ footer {
     border: 1px solid #fff;
     background: #24303c;
     padding: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 1rem;
     color: #fff; }
   .contacto__dato__dos {
