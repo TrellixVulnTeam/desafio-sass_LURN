@@ -1,15 +1,13 @@
-.parallax {
-  background-image: url("../recursos/imagen-principal-3.jpg");
+.backParallax, .parallax, .parallax__dos {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+.parallax {
+  background-image: url("../recursos/imagen-principal-3.jpg"); }
   .parallax__dos {
-    background-image: url("../recursos/imagen-principal.jfif");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+    background-image: url("../recursos/imagen-principal.jfif"); }
 
 .header {
   display: flex;
@@ -247,7 +245,8 @@ footer {
   font-size: 1em;
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 1.5rem; }
 
 /* -------------------- pagina de contacto ------------------------------  */
 .contacto {
@@ -356,6 +355,32 @@ span {
       text-align: center;
       margin-bottom: 10px; }
 
+/*CELULAR*/
+@media (min-width: 320px) and (max-width: 540px) {
+  .presentacion h2 {
+    font-size: 1.2rem; }
+  .evento__grid {
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "foto_uno"  "descripcion_uno" "foto_dos"  "descripcion_dos" "foto_tres" "descripcion_tres" "aside";
+    gap: 1rem; }
+  /* ------------ GALERIA --------------  */
+  .grid__container {
+    display: flex;
+    flex-direction: column; }
+  .grid__item {
+    border: 5px solid;
+    height: 40vh; }
+  /* ------------ Informacion --------------  */
+  .info__Container {
+    height: 50vh; }
+  /* ------------ Comunidad ---------------  */
+  .comunidad__info {
+    flex-direction: column; }
+  .comunidad__img {
+    align-self: center;
+    margin-bottom: 1rem; } }
+
 /*TABLET*/
 @media (min-width: 541px) and (max-width: 980px) {
   .grid__container {
@@ -405,30 +430,3 @@ span {
   .grid__doce {
     grid-column: 2/3;
     grid-row: 6/7; } }
-
-/*CELULAR*/
-@media (min-width: 320px) and (max-width: 540px) {
-  .presentacion h2 {
-    font-size: 1.2rem; }
-  .evento__grid {
-    grid-template-rows: 0.3fr 1fr 0.6fr 1fr 0.6fr 1fr 0.6fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "foto_uno"  "descripcion_uno" "foto_dos"  "descripcion_dos" "foto_tres" "descripcion_tres" "aside";
-    gap: 1rem; }
-  /* ------------ GALERIA --------------  */
-  .grid__container {
-    display: flex;
-    flex-direction: column; }
-  .grid__item {
-    border: 5px solid;
-    height: 40vh; }
-  /* ------------ Informacion --------------  */
-  .info__Container {
-    height: 50vh; }
-  /* ------------ Comunidad ---------------  */
-  .comunidad__info {
-    display: flex;
-    flex-direction: column; }
-  .comunidad__img {
-    align-self: center;
-    margin-bottom: 1rem; } }

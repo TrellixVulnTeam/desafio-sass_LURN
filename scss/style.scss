@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'sasscript';
 @import 'parallax';
 @import 'header';
 
@@ -238,6 +239,7 @@ footer {
         font-family: $letra-secundaria;
         background-color: rgba(255, 255, 255, 0.4);
         border-radius: 5px;
+        padding: 1.5rem;
     }
 }
 
@@ -372,77 +374,6 @@ span{
         }
     }
 }
-
-
-/*TABLET*/
-@media (min-width:541px) and (max-width:980px) {
-
-    .grid{
-        &__container{
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-        }
-        &__uno{
-            grid-column: 1/2;
-            grid-row-start: 1;
-            grid-row-end: 2;
-        }
-        &__dos {
-            grid-column: 2/3;
-            grid-row: 1/2;
-        }
-        &__tres{
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
-        &__cuatro {
-            grid-row: 2/3;
-            grid-column: 2/3;
-        }
-        &__cinco{
-            grid-row: 3/4;
-            grid-column: 1/2;
-        }
-        &__seis{
-            grid-column: 2/3;
-            grid-row: 3/4;
-        }
-        &__seis{
-            grid-column: 2/3;
-            grid-row: 3/4;
-        }
-        &__siete{
-            grid-column: 1/2;
-            grid-row: 4/5;
-        }
-        &__ocho{
-            grid-column: 2/3;
-            grid-row: 4/5;
-        }
-        &__nueve{
-            grid-column: 1/2;
-            grid-row: 5/6;
-        }
-        &__diez{
-            grid-column: 2/3;
-            grid-row: 5/6;
-        }
-        &__once{
-            grid-column: 1/2;
-            grid-row: 6/7;
-        }
-        &__once{
-            grid-column: 1/2;
-            grid-row: 6/7;
-        }
-        &__doce{
-            grid-column: 2/3;
-            grid-row: 6/7;
-        }
-    }
-}
-
 
 @import 'mediaqueries';
 

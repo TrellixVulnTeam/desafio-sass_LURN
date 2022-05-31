@@ -5,7 +5,7 @@
         font-size: 1.2rem; 
     }
     .evento__grid {
-        grid-template-rows: 0.3fr 1fr 0.6fr 1fr 0.6fr 1fr 0.6fr 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 0.3fr;
         grid-template-columns: 1fr ;
         grid-template-areas:"titulo"
                             "foto_uno" 
@@ -38,12 +38,80 @@
 
     .comunidad{
         &__info{
-            display: flex;
             flex-direction: column;
         }
         &__img{
             align-self: center;
             margin-bottom: 1rem;
+        }
+    }
+}
+
+/*TABLET*/
+@media (min-width:541px) and (max-width:980px) {
+
+    .grid{
+        &__container{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+        &__uno{
+            grid-column: 1/2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        &__dos {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        &__tres{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &__cuatro {
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        &__cinco{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        &__seis{
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        &__seis{
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        &__siete{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        &__ocho{
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+        &__nueve{
+            grid-column: 1/2;
+            grid-row: 5/6;
+        }
+        &__diez{
+            grid-column: 2/3;
+            grid-row: 5/6;
+        }
+        &__once{
+            grid-column: 1/2;
+            grid-row: 6/7;
+        }
+        &__once{
+            grid-column: 1/2;
+            grid-row: 6/7;
+        }
+        &__doce{
+            grid-column: 2/3;
+            grid-row: 6/7;
         }
     }
 }
