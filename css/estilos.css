@@ -1,15 +1,18 @@
-.parallax {
-  background-image: url("../recursos/imagen-principal-3.jpg");
+.containerFlex, .presentacion, .multimedia__flex, .comunidad__container, .info__Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.backParallax, .parallax, .parallax__dos {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+.parallax {
+  background-image: url("../recursos/imagen-principal-3.jpg"); }
   .parallax__dos {
-    background-image: url("../recursos/imagen-principal.jfif");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+    background-image: url("../recursos/imagen-principal.jfif"); }
 
 .header {
   display: flex;
@@ -68,9 +71,6 @@ html {
 
 /* =====================          HEADER          =========================== */
 .presentacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh; }
   .presentacion__container {
@@ -137,7 +137,7 @@ html {
     padding: 20px;
     border-radius: 3px; }
   .menu__titulo {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Roboto Slab", serif;
     font-weight: normal;
     font-size: 2rem;
     margin-bottom: 1.5rem;
@@ -155,9 +155,6 @@ html {
   background-color: #4158D0;
   background-image: linear-gradient(166deg, #4158D0 0%, #C850C0 46%, #030855 100%);
   padding: 12px; }
-  .multimedia__flex {
-    display: flex;
-    flex-direction: column; }
 
 /* =====================         FOOTER           =========================== */
 footer {
@@ -185,8 +182,7 @@ footer {
     transform: scale(1.1); }
 
 .grid__uno {
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row: 1/3;
   background-image: url(../recursos/galeria/cumuloGlaxias.jpg); }
 
 .grid__dos {
@@ -245,9 +241,10 @@ footer {
 
 .grid__parrafo {
   font-size: 1em;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Roboto Slab", serif;
   background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 5px; }
+  border-radius: 5px;
+  padding: 1.5rem; }
 
 /* -------------------- pagina de contacto ------------------------------  */
 .contacto {
@@ -263,7 +260,7 @@ footer {
     margin-top: 100px;
     margin-bottom: 100px;
     border-radius: 4px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Roboto Slab", serif;
     color: #fff;
     box-shadow: 8px 24px 37px #000000; }
   .contacto__btn {
@@ -286,7 +283,7 @@ footer {
     border: 1px solid #fff;
     background: #24303c;
     padding: 10px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Roboto Slab", serif;
     font-size: 1rem;
     color: #fff; }
   .contacto__dato__dos {
@@ -306,10 +303,7 @@ span {
 
 /*   ---------------    comunidad   ----------------------    */
 .comunidad__container {
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
   align-content: center;
   align-content: space-around;
   padding: 0 1.5rem; }
@@ -341,9 +335,6 @@ span {
 .info {
   margin: 20vh 0; }
   .info__Container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-top: 3rem;
     padding: 30px;
     width: 100%;
@@ -356,10 +347,35 @@ span {
       text-align: center;
       margin-bottom: 10px; }
 
+/*CELULAR*/
+@media (min-width: 320px) and (max-width: 540px) {
+  .presentacion h2 {
+    font-size: 1.2rem; }
+  .evento__grid {
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "foto_uno"  "descripcion_uno" "foto_dos"  "descripcion_dos" "foto_tres" "descripcion_tres" "aside";
+    gap: 1rem; }
+  /* ------------ GALERIA --------------  */
+  .grid__container {
+    display: flex;
+    flex-direction: column; }
+  .grid__item {
+    border: 5px solid;
+    height: 40vh; }
+  /* ------------ Informacion --------------  */
+  .info__Container {
+    height: 50vh; }
+  /* ------------ Comunidad ---------------  */
+  .comunidad__info {
+    flex-direction: column; }
+  .comunidad__img {
+    align-self: center;
+    margin-bottom: 1rem; } }
+
 /*TABLET*/
 @media (min-width: 541px) and (max-width: 980px) {
   .grid__container {
-    display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr; }
   .grid__uno {
@@ -405,30 +421,3 @@ span {
   .grid__doce {
     grid-column: 2/3;
     grid-row: 6/7; } }
-
-/*CELULAR*/
-@media (min-width: 320px) and (max-width: 540px) {
-  .presentacion h2 {
-    font-size: 1.2rem; }
-  .evento__grid {
-    grid-template-rows: 0.3fr 1fr 0.6fr 1fr 0.6fr 1fr 0.6fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "foto_uno"  "descripcion_uno" "foto_dos"  "descripcion_dos" "foto_tres" "descripcion_tres" "aside";
-    gap: 1rem; }
-  /* ------------ GALERIA --------------  */
-  .grid__container {
-    display: flex;
-    flex-direction: column; }
-  .grid__item {
-    border: 5px solid;
-    height: 40vh; }
-  /* ------------ Informacion --------------  */
-  .info__Container {
-    height: 50vh; }
-  /* ------------ Comunidad ---------------  */
-  .comunidad__info {
-    display: flex;
-    flex-direction: column; }
-  .comunidad__img {
-    align-self: center;
-    margin-bottom: 1rem; } }
